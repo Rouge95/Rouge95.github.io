@@ -21,7 +21,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: npm install
       - name: Build Tailwind CSS
         run: npx tailwindcss -i ./src/styles/global.css -o ./dist/output.css --minify
       - name: Build Astro site
