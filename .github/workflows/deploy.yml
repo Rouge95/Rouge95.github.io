@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./src/styles/global.css -o ./dist/output.css --minify
+        run: node ./node_modules/tailwindcss/lib/cli.js -i ./src/styles/global.css -o ./dist/output.css --minify
       - name: Build Astro site
         run: npm astro build
         
